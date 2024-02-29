@@ -8,7 +8,7 @@ namespace Joshua_Gonzales___IST311___FederalTaxReturn
     /// <summary>
     /// Interaction logic for MainWindow.xaml (Federal Tax Return System For IST 311)
     /// </summary>
-    /// 
+    /// Values have no distict meaning
     ///@author Joshua Gonzales 
     ///
     public partial class MainWindow : Window
