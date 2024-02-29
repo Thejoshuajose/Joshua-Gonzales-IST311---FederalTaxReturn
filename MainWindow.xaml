@@ -1,0 +1,40 @@
+﻿<Window x:Class="Joshua_Gonzales___IST311___FederalTaxReturn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Joshua_Gonzales___IST311___FederalTaxReturn"
+        mc:Ignorable="d"
+        Title="IST331 - Federal Income Tax" Height="450" Width="662" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Center" Width="662" GotFocus="Grid_GotFocus">
+        <Label Content="SSN" HorizontalAlignment="Left" Height="26" Margin="43,35,0,0" VerticalAlignment="Top" Width="64"/>
+        <TextBox x:Name="txtSocialSecurity" HorizontalAlignment="Left" Height="24" Margin="43,61,0,0" TextWrapping="Wrap" Text="999-99-9999" VerticalAlignment="Top" Width="128" GotFocus="txtSocialSecurity_GotFocus" LostFocus="txtSocialSecurity_LostFocus" TextChanged="txtSocialSecurity_TextChanged" MaxLength="11"/>
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Height="24" Margin="43,102,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="128" GotFocus="txtFirstName_GotFocus" LostFocus="txtFirstName_LostFocus" TextChanged="txtFirstName_TextChanged"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Height="24" Margin="200,102,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="128" TextChanged="txtLastName_TextChanged" GotFocus="txtLastName_GotFocus" LostFocus="txtLastName_LostFocus"/>
+        <TextBox x:Name="txtFullName" HorizontalAlignment="Left" Height="27" Margin="43,135,0,0" TextWrapping="Wrap" Text="Full Name" VerticalAlignment="Top" Width="285" Focusable="False"/>
+        <TextBox x:Name="txtGrossAnnualInclome" HorizontalAlignment="Left" Height="26" Margin="43,250,0,0" TextWrapping="Wrap" Text="Gross Annual Income" VerticalAlignment="Top" Width="128" TextChanged="txtGrossAnualInclome_TextChanged" LostFocus="txtGrossAnnualInclome_LostFocus" GotFocus="txtGrossAnnualInclome_GotFocus"/>
+        <TextBox x:Name="txtCharitableDeduction" HorizontalAlignment="Left" Height="26" Margin="43,286,0,0" TextWrapping="Wrap" Text="Charitable Deduction" VerticalAlignment="Top" Width="128" TextChanged="txtCharitableDeduction_TextChanged" GotFocus="txtCharitableDeduction_GotFocus" LostFocus="txtCharitableDeduction_LostFocus"/>
+        <TextBox x:Name="txtMortgageInterest" HorizontalAlignment="Left" Height="26" Margin="43,318,0,0" TextWrapping="Wrap" Text="Mortgage Interest" VerticalAlignment="Top" Width="128" LostFocus="txtMortgageInterest_LostFocus" GotFocus="txtMortgageInterest_GotFocus" TextChanged="txtMortgageInterest_TextChanged"/>
+        <GroupBox x:Name="grpMaritalStatus" Header="Marital Status" Margin="364,48,0,217" HorizontalAlignment="Left" Width="88"/>
+        <StackPanel x:Name="StatusChoice" Margin="364,94,0,217" HorizontalAlignment="Left" Width="88">
+            <RadioButton x:Name="radSingle" Content="Single" Checked="radSingle_Checked"/>
+            <RadioButton x:Name="radMarried" Content="Married" Checked="radMarried_Checked"/>
+            <RadioButton x:Name="radSeperated" Content="Seperated" Checked="radSeperated_Checked"/>
+            <RadioButton x:Name="radHOH" Content="HOH" Checked="radHOH_Checked"/>
+        </StackPanel>
+        <GroupBox x:Name="grpDependancies" Header="Number of &#xA;Dependancies&#xA;" Margin="491,35,0,217" HorizontalAlignment="Left" Width="93"/>
+        <StackPanel x:Name="DepChoices" Margin="491,94,0,217" HorizontalAlignment="Left" Width="79">
+            <RadioButton x:Name="radZeroDep" Content="Zero" Checked="radZero_Checked"/>
+            <RadioButton x:Name="radOneDep" Content="One " Checked="radOneDep_Checked"/>
+            <RadioButton x:Name="radTwoDep" Content="Two" Checked="radTwoDep_Checked"/>
+            <RadioButton x:Name="radThreeDep" Content="Three" Checked="radThreeDep_Checked"/>
+            <RadioButton x:Name="radFourDep" Content="Four" Checked="radFourDep_Checked"/>
+            <RadioButton x:Name="radFiveDep" Content="Five" Checked="radFiveDep_Checked"/>
+        </StackPanel>
+        <Button x:Name="btnCalculate" Content="Calculate" HorizontalAlignment="Left" Height="31" Margin="43,367,0,0" VerticalAlignment="Top" Width="117" Click="btnCalculate_Click"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Height="31" Margin="264,367,0,0" VerticalAlignment="Top" Width="117" Click="btnClear_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Height="31" Margin="467,367,0,0" VerticalAlignment="Top" Width="117" Click="btnExit_Click"/>
+        <TextBox x:Name="txtTotalOwedOrRef" HorizontalAlignment="Left" Height="34" Margin="340,282,0,0" TextWrapping="Wrap" Text="Total Owed or To Be Refunded" VerticalAlignment="Top" Width="244" TextChanged="txtTotalOwedOrRef_TextChanged" Focusable="False"/>
+
+    </Grid>
+</Window>
